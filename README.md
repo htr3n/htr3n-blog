@@ -1,0 +1,1 @@
+This is the WIP source code of my [blog](https://htr3n.github.io) hosted at github.io. The blog uses the static site generator [Hugo](https://gohugo.io/) with theme [`hyde-hyde`](https://github.com/htr3n/hyde-hyde).
