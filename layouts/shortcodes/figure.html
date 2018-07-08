@@ -1,0 +1,40 @@
+<!-- image -->
+<!-- https://github.com/gohugoio/hugo/issues/4406 -->
+<!-- https://github.com/gohugoio/hugo/issues/4441 -->
+{{ $permalink := $.Page.Permalink }}
+{{ $image := .Get "src" }}
+{{ $image_link_absolute := (findRE "^/" $image) }}
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+    {{ if .Get "link"}}<a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>{{ end }}
+        {{ if $image_link_absolute }}
+            <img src="{{ $image | absURL }}"
+        {{ else }}
+            <img src="{{ (printf "%s%s" $permalink $image) }}"
+        {{ end }}
+             alt="{{- if (or (.Get "alt") (.Get "caption")) -}}
+                      {{- with .Get "alt"}}
+                          {{- . -}}
+                      {{else}}
+                          {{- .Get "caption" | markdownify | plainify -}}
+                      {{- end -}}
+                  {{- else -}}
+                      {{- $image -}}
+                  {{- end -}}"
+             {{- with .Get "width" }}width="{{ . }}" {{ end -}}
+             {{- with .Get "height" }}height="{{ . }}" {{ end -}}/>
+        {{ if .Get "link"}}</a>{{ end }}
+        {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
+            <figcaption>
+                {{ if isset .Params "title" }}
+                    <h4>{{ .Get "title" }}</h4>
+                {{ end }}
+                {{ if (or (.Get "caption") (.Get "attr")) }}<p>
+                    {{ .Get "caption" | markdownify }}
+                    {{ with .Get "attrlink"}}<a href="{{ . }}"> {{ end }}
+                        {{ .Get "attr" | markdownify }}
+                        {{ if .Get "attrlink"}}</a> {{ end }}</p>
+                {{ end }}
+            </figcaption>
+        {{ end }}
+</figure>
+<!-- image -->

@@ -1,0 +1,36 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "htr3n's blog :: technology, thoughts, opinions, rants",
+  "main": "index.js",
+  "scripts": {
+    "build-remote": "hugo -v --cleanDestinationDir --baseURL \"https://htr3n.github.io\"",
+    "build-local": "hugo -v --cleanDestinationDir --buildDrafts --buildFuture --baseURL \"http://blog.test:8888\"",
+    "lint": "eslint static/js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/hoanghuytran/blog.git"
+  },
+  "keywords": [
+    "blog",
+    "hugo",
+    "static site generator",
+    "gulp",
+    "webpack"
+  ],
+  "author": "htr3n",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/hoanghuytran/blog#readme",
+  "dependencies": {
+    "npm": "^5.8.0"
+  },
+  "devDependencies": {
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1",
+    "webpack": "^4.0.0"
+  }
+}

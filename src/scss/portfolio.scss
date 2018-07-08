@@ -1,0 +1,236 @@
+$color_1: #303030;
+$color_2: #fff;
+$color_3: #5f6b77;
+$color_4: #778492;
+$background_color_1: #479FC8;
+
+.row {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+.col-xs-12 {
+	width: 100%;
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+	position: relative;
+}
+.col-sm-4 {
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+	position: relative;
+}
+.col-md-4 {
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+	position: relative;
+}
+.col-sm-8 {
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+	position: relative;
+}
+.col-md-8 {
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+	position: relative;
+}
+.portfolio-container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 38rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.portfolio-content {
+	padding-bottom: 2rem;
+	padding-top: 2rem;
+}
+h1 {
+	color: $color_1;
+	font-weight: 700;
+}
+h2 {
+	color: $color_1;
+	font-weight: 700;
+}
+h3 {
+	color: $color_1;
+	font-weight: 700;
+	font-size: 1.675rem;
+}
+.btn {
+	font-weight: bold;
+	padding: 8px 16px;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	&:focus {
+		color: $color_2;
+	}
+}
+.btn-cta-secondary {
+	background: #479FC8;
+	border: 1px solid #479FC8;
+	color: $color_2;
+	font-weight: 600;
+	text-transform: uppercase;
+	&:hover {
+		background: #3893bd;
+		border: 1px solid #3893bd;
+		color: $color_2;
+	}
+}
+.text-left {
+	text-align: left;
+}
+.section {
+	margin-bottom: 30px;
+	.section-inner {
+		background: #fff;
+		padding: 30px;
+	}
+	.heading {
+		margin-top: 0;
+		margin-bottom: 30px;
+		color: $color_1;
+		font-size: 2.125rem;
+	}
+}
+.item {
+	margin-bottom: 30px;
+	.title {
+		margin-top: 0;
+		a {
+			color: $color_1;
+			&:hover {
+				color: $color_3;
+			}
+		}
+	}
+	.project-image {
+		&:hover {
+			-webkit-opacity: 0.8;
+			-moz-opacity: 0.8;
+			opacity: 0.8;
+		}
+	}
+}
+.divider {
+	margin-bottom: 60px;
+}
+.featured {
+	margin-bottom: 60px;
+	.title {
+		margin-bottom: 5px;
+	}
+	.summary {
+		margin-bottom: 30px;
+		color: $color_4;
+	}
+	img {
+		margin-bottom: 30px;
+	}
+	.desc {
+		margin-bottom: 30px;
+	}
+}
+.desc {
+	.summary {
+		margin-bottom: 30px;
+		color: $color_4;
+		font-style: italic;
+	}
+}
+.featured-image {
+	position: relative;
+	.text {
+		background: #3AAA64;
+		color: $color_2;
+	}
+	.ribbon {
+		position: absolute;
+		top: -4px;
+		right: -4px;
+		width: 110px;
+		height: 110px;
+		overflow: hidden;
+		.text {
+			position: relative;
+			left: -8px;
+			top: 18px;
+			width: 158px;
+			padding: 10px 10px;
+			font-size: 15px;
+			font-weight: bold;
+			text-align: center;
+			text-transform: uppercase;
+			color: $color_2;
+			background-color: $background_color_1;
+			-webkit-transform: rotate(45deg) translate3d(0, 0, 0);
+			-moz-transform: rotate(45deg) translate3d(0, 0, 0);
+			-ms-transform: rotate(45deg) translate3d(0, 0, 0);
+			-o-transform: rotate(45deg) translate3d(0, 0, 0);
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: -5px;
+				border-top: 5px solid #276582;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				left: 0;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: -5px;
+				border-top: 5px solid #276582;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				right: 0;
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.col-md-4 {
+		float: left;
+		width: 33.33333333%;
+	}
+	.col-md-8 {
+		float: left;
+		width: 66.66666667%;
+	}
+	.portfolio-container {
+		width: 1360px;
+	}
+}
+@media (min-width: 768px) {
+	.col-sm-8 {
+		width: 66.66666667%;
+	}
+}
+@media (min-width: 48em) {
+	.portfolio-content {
+		margin-left: 20rem;
+		margin-right: 2rem;
+		max-width: 38rem;
+	}
+}
+@media (min-width: 64em) {
+	.portfolio-content {
+		margin-left: 20rem;
+		margin-right: 2rem;
+		max-width: 44rem;
+	}
+}
+@media (max-width: 767px) {
+	.project-image {
+		margin-bottom: 15px;
+	}
+}

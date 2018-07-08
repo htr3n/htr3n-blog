@@ -1,0 +1,101 @@
+html,
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.66em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+.sidebar-about h1 {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h1 {    
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+h2 {
+    font-size: 1.85rem;
+    font-weight: 600;
+}
+h3 {    
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+h4 {    
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+h5 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.img-circle {
+    border-radius: 50%;
+}
+
+.headshot {
+    height: 115px;
+    width: 115px;
+}
+
+.brand {
+    font-size: 2.6em;
+    margin-bottom: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.meta {
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+pre {
+    padding: 1px;
+    tab-size: 2;
+}
+
+.hljs {
+    overflow-x: auto;
+    white-space: pre;
+}
+
+pre code,
+li code,
+td code,
+code {
+    background: #eee;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    padding: 1px 4px;
+    white-space: pre-wrap;
+}
+
+code {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 82%;
+}
+
+.copyright,
+.poweredby {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Changing from font-awesome 4 to 5, the class pull-right was removed */
+
+.pull-right {
+    float: right;
+}
