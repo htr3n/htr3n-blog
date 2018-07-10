@@ -4,14 +4,14 @@
   "description": "htr3n's blog :: technology, thoughts, opinions, rants",
   "main": "index.js",
   "scripts": {
-    "build-remote": "hugo -v --cleanDestinationDir --baseURL \"https://htr3n.github.io\"",
-    "build-local": "hugo -v --cleanDestinationDir --buildDrafts --buildFuture --baseURL \"http://blog.test:8888\"",
-    "lint": "eslint static/js",
+    "remote": "hugo -v --cleanDestinationDir --baseURL \"https://htr3n.github.io\"",
+    "local": "hugo -v --cleanDestinationDir --buildDrafts --buildFuture --baseURL \"http://blog.test:8888\"",
+    "lint": "node_modules/.bin/eslint static/js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/hoanghuytran/blog.git"
+    "url": "git+ssh://git@github.com:htr3n/htr3n-blog.git"
   },
   "keywords": [
     "blog",
@@ -24,10 +24,15 @@
   "license": "MIT",
   "homepage": "https://bitbucket.org/hoanghuytran/blog#readme",
   "dependencies": {
-    "npm": "^5.8.0"
+    "npm": "^6.1.0"
   },
   "devDependencies": {
-    "cssnano": "^3.10.0",
+    "cssnano": "^4.0.0",
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.0",
+    "eslint-plugin-react": "^7.10.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-sass": "^4.0.1",

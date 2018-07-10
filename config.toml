@@ -13,25 +13,40 @@ googleAnalytics = "UA-112764962-1"
 enableRobotsTXT = true
 enableEmoji = true
 
+# Built-in highlighting
+# https://gohugo.io/content-management/syntax-highlighting
+# pygmentsCodeFences = true
+# pygmentsStyle = "friendly"
+# pygmentsStyle = "monokai"
+# pygmentsStyle = "default"
+# pygmentsUseClasses = true     # this overrides 'PygmentsStyle'
+# http://pygments.org
+# pygmentsUseClassic = true     # falling back to Pygments instead of Chroma
+
 ## Site Settings
 [params]
     author = "htr3n"
     description = "technology, thoughts, opinions, rants"
-    authorimage = "/img/avatar.png"
+    authorimage = "img/avatar.png"
+    
+    # https://golang.org/pkg/time/#example_Time_Format
     dateformat = "Jan 2, 2006"
+    
+    # https://highlightjs.org
     highlightjs = true
     #highlightjsstyle = "agate"
-    #highlightjsstyle = "rainbow"
-    #highlightjsstyle = "atom-one-dark"
-    #highlightjsstyle = "ocean"
-    #highlightjsstyle = "tomorrow-night-eighties"
-    highlightjsstyle = "zenburn"
     #highlightjsstyle = "androidstudio"
+    #highlightjsstyle = "atom-one-dark"
+    #highlightjsstyle = "dracula"
+    highlightjsstyle = "ocean"
     #highlightjsstyle = "railscasts"
-    #PygmentsCodeFences = true
-    #PygmentsStyle = "friendly"
-    #PygmentsUseClasses = true
-    #GraphCommentId = "htr3n-github-io" # please choose either GraphComment or Disqus
+    #highlightjsstyle = "rainbow"
+    #highlightjsstyle = "tomorrow-night-eighties"
+    #highlightjsstyle = "zenburn"
+    
+    # either GraphComment or Disqus
+    # https://graphcomment.com
+    #GraphCommentId = "htr3n-github-io" 
     mainSections = ["post"]
 [permalinks]
     posts = "/:year/:month/:slug/"
@@ -39,7 +54,7 @@ enableEmoji = true
 
 ## Site Meta Settings
 [params.meta]
-    description = "htr3n's blog :: technology, opinions, and rants about everything"
+    description = "htr3n's blog :: technology, thoughts, opinions, and rants"
     keywords = "blog,java,php,python,golang,javascript,shell,thoughts,macos,apple,tiếng việt,parental,family,apache,httpd,laravel,politics,critical thinking,chính trị,luật,hiến pháp,xã hội,gia đình"
 
 ## Social Accounts
@@ -69,7 +84,7 @@ enableEmoji = true
     weight = 300
     url = "/portfolio/"
 [[menu.main]]
-    name = "About Me"
+    name = "About"
     identifier = "about"
     weight = 900
     url = "/about/"
@@ -81,23 +96,25 @@ enableEmoji = true
 
 # https://gohugo.io/content-management/related
 [related]
-# Only include matches with rank >= threshold. This is a normalized rank between 0 and 100.
-threshold = 80
-# To get stable "See also" sections we, by default, exclude newer related pages.
-includeNewer = false
-# Will lower case keywords in both queries and in the indexes.
-toLower = false
+    # Only include matches with rank >= threshold. This is a normalized rank 
+    # between 0 and 100.
+    threshold = 80
+    # To get stable "See also" sections we, by default, exclude newer related 
+    # pages.
+    includeNewer = false
+    # Will lower case keywords in both queries and in the indexes.
+    toLower = false
 [[related.indices]]
-name = "keywords"
-weight = 150
+    name = "keywords"
+    weight = 150
 [[related.indices]]
-name  = "author"
-toLower = true
-weight = 30
+    name  = "author"
+    toLower = true
+    weight = 30
 [[related.indices]]
-name  = "tags"
-weight = 100
+    name  = "tags"
+    weight = 100
 [[related.indices]]
-name  = "date"
-weight = 10
-pattern = "2006"
+    name  = "date"
+    weight = 10
+    pattern = "2006"
