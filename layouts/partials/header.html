@@ -1,4 +1,5 @@
-<link href="http://gmpg.org/xfn/11" rel="profile">
+<head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Cache-Control" content="public" />
@@ -14,12 +15,13 @@
     {{- end }}
     <meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}" property="og:title">
     <meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.meta.description }}{{ if eq $isHomePage false }} - {{ .Description }}{{ end }}" property="og:description">
-    {{ "<!-- CSS -->" | safeHTML }}
+    {{ "<!-- Google fonts -->" | safeHTML }}
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i|IBM+Plex+Sans+Condensed:400,500,600,700|Source+Code+Pro:400,400i" rel="stylesheet">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/print.min.css" media="print">
+    {{ "<!-- Original Hyde Styles -->" | safeHTML }}
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/poole.min.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/hyde.min.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/print.min.css" media="print">
     {{ "<!-- Font-Awesome -->" | safeHTML }}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/brands.css" integrity="sha384-7xAnn7Zm3QC1jFjVc1A6v/toepoG3JXboQYzbM0jrPzou9OFXm/fY6Z/XiIebl/k" crossorigin="anonymous">
@@ -32,7 +34,7 @@
     {{ "<!-- Pygments Syntax -->" | safeHTML }}
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/syntax.min.css">
     {{- end }}
-    {{- "<!-- Customised CSS -->" | safeHTML }}
+    {{- "<!-- hyde-hyde customised styles -->" | safeHTML }}
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/hyde-hyde.css">
     {{ `<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -47,3 +49,4 @@
     <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{- end }}
+</head>
