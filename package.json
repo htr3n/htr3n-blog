@@ -6,6 +6,7 @@
   "scripts": {
     "remote": "hugo -v --cleanDestinationDir --baseURL \"https://htr3n.github.io\"",
     "local": "hugo -v --cleanDestinationDir --buildDrafts --buildFuture --baseURL \"http://blog.test:8888\"",
+    "nodraft": "hugo -v --cleanDestinationDir --baseURL \"http://blog.test:8888\"",
     "live": "hugo server -v -w --cleanDestinationDir --buildDrafts --baseURL \"http://blog.test:1313\"",
     "lint": "node_modules/.bin/eslint static/js",
     "compile": "echo \"Nothing to compile\"",

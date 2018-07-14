@@ -1,19 +1,19 @@
 html,
 body {
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 400;
     line-height: 1.66rem;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.45rem;
 }
 h2 {
-    font-size: 2rem;
+    font-size: 1.95rem;
 }
 h3 {
-    font-size: 1.55rem;
+    font-size: 1.5rem;
 }
 h4 {
     font-size: 1.25rem;
@@ -86,11 +86,11 @@ code {
     float: right;
 }
 
-a:focus, 
+a:focus,
 a:hover {
     border-width: 2px;
     border-style: none none solid;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     text-decoration: none;
     background-color: transparent;
     background: transparent;
@@ -109,15 +109,14 @@ a:hover .tag {
     color: #606570;
     font-size: .8rem;
     line-height: 1rem;
-    padding: 0px 10px 1px;
+    padding: 0 10px 1px;
 }
 
 .subtitle {
     display: block;
-    font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-style: italic;
-    padding: 0rem 0rem 1rem 0rem;
+    padding: 0 0 1rem 0;
 }
 
 .list-title {
@@ -130,7 +129,7 @@ a:hover .tag {
 }
 
 /* Small devices (tablets, 768px and up) */
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
     .pull-right {
         display: none;
     }
