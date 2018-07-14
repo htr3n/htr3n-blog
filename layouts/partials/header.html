@@ -13,14 +13,25 @@
     {{- else }}
     <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
     {{- end }}
-    <meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}" property="og:title">
-    <meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.meta.description }}{{ if eq $isHomePage false }} - {{ .Description }}{{ end }}" property="og:description">
+    {{ "<!-- Twitter -->" | safeHTML }}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{.Site.Params.social.twitter}}">
+    <meta name="twitter:title" content="{{- $isHomePage := eq .Title .Site.Title -}}{{.Title}}{{- if eq $isHomePage false -}} - {{.Site.Title}}{{- end -}}">
+    <meta name="twitter:description" content="{{- $isHomePage := eq .Title .Site.Title -}}{{.Site.Params.meta.description}}{{- if eq $isHomePage false -}} - {{.Description}}{{- end -}}">
+    <meta name="twitter:creator" content="{{.Site.Params.author}}">
+    {{ "<!-- OpenGraph Protocol -->" | safeHTML }}
+    <meta property="og:locale" content="{{.Site.LanguageCode}}">
+    <meta property="og:site_name" content="{{.Site.Title}}">
+    <meta property="og:url" content="{{.Permalink}}">
+    <meta property="og:title" content="{{$isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{.Site.Title}}{{ end }}">
+    <meta property="og:description" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.meta.description }}{{ if eq $isHomePage false }} - {{ .Description }}{{ end }}">
+    <meta property="og:type" content="article">
     {{ "<!-- Google fonts -->" | safeHTML }}
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i|IBM+Plex+Sans+Condensed:400,500,600,700|Source+Code+Pro:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500,600,700|Source+Code+Pro:400,400i" rel="stylesheet">
     {{ "<!-- Original Hyde Styles -->" | safeHTML }}
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/poole.min.css">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/hyde.min.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/poole.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/hyde.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/print.min.css" media="print">
     {{ "<!-- Font-Awesome -->" | safeHTML }}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp" crossorigin="anonymous">

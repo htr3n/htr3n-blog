@@ -1,38 +1,24 @@
 html,
 body {
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 1.66em;
+    line-height: 1.66rem;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
-}
-.sidebar-about h1 {
-    font-family: 'IBM Plex Sans', sans-serif;
-}
-
-h1 {    
-    font-size: 2.2rem;
-    font-weight: 700;
+h1 {
+    font-size: 2.5rem;
 }
 h2 {
-    font-size: 1.85rem;
-    font-weight: 600;
+    font-size: 2rem;
 }
-h3 {    
-    font-size: 1.45rem;
-    font-weight: 500;
+h3 {
+    font-size: 1.55rem;
 }
-h4 {    
-    font-size: 1.2rem;
-    font-weight: 500;
+h4 {
+    font-size: 1.25rem;
 }
-h5 {
-    font-size: 1.1rem;
-    font-weight: 400;
-}
+
 .img-circle {
     border-radius: 50%;
 }
@@ -90,12 +76,62 @@ code {
 
 .center {
     display: block;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
 }
 
 /* Changing from font-awesome 4 to 5, the class pull-right was removed */
 
 .pull-right {
     float: right;
+}
+
+a:focus, 
+a:hover {
+    border-width: 2px;
+    border-style: none none solid;
+    padding-bottom: 0px;
+    text-decoration: none;
+    background-color: transparent;
+    background: transparent;
+    cursor: pointer;
+    word-wrap: break-word;
+}
+
+a:hover .tag {
+    border-style: none;
+}
+
+.tag {
+    background: #d6d9e0;
+    border-radius: 2px;
+    display: inline-block;
+    color: #606570;
+    font-size: .8rem;
+    line-height: 1rem;
+    padding: 0px 10px 1px;
+}
+
+.subtitle {
+    display: block;
+    font-weight: bold;
+    font-size: 1.25rem;
+    font-style: italic;
+    padding: 0rem 0rem 1rem 0rem;
+}
+
+.list-title {
+    font-size: 1.875rem;
+    line-height: 1.25;
+}
+
+.list-title a {
+    color: #303030;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+    .pull-right {
+        display: none;
+    }
 }
