@@ -1,0 +1,313 @@
+/*
+ * Based on 'hyde' designed, built, and released under MIT license by @mdo
+ * https://github.com/poole/hyde
+ *
+ */
+html {
+  font-family: "IBM Plex Sans", 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.66em;
+}
+
+@media (min-width: 48em) {
+  html {
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+
+@media (min-width: 58em) {
+  html {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+/*
+   * Sidebar
+   *
+   * Flexible banner for housing site name, intro, and "footer" content. Starts
+   * out above content in mobile and later moves to the side with wider viewports.
+   */
+
+.sidebar {
+  background-color: #300030;
+  /* fallback of rgba() */
+  color: rgb(255, 255, 255);
+  /* CSS3 */
+  color: rgba(255, 255, 255, .5);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 48em) {
+  .sidebar {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    text-align: left;
+    top: 0;
+    width: 18rem;
+  }
+}
+
+/* Sidebar links */
+
+.sidebar a {
+  color: #fff;
+}
+
+/* About section */
+
+.sidebar-about h1 {
+  color: #fff;
+  margin-top: 0;
+}
+
+/* Sidebar nav */
+
+.sidebar-nav {
+  list-style: none;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding-left: 0;
+}
+
+.sidebar-nav-item {
+  display: block;
+  line-height: 1.75;
+}
+
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+  text-decoration: underline;
+}
+
+.sidebar-nav-item .active {
+  font-weight: bold;
+}
+
+/* Sticky sidebar
+   *
+   * Add the `sidebar-sticky` class to the sidebar's container to affix it the
+   * contents to the bottom of the sidebar in tablets and up.
+   */
+
+@media (min-width: 48em) {
+  .sidebar-sticky {
+    left: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+}
+
+/* Container
+   *
+   * Align the contents of the site above the proper threshold with some margin-fu
+   * with a 25%-wide `.sidebar`.
+   */
+
+.content {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+@media (min-width: 48em) {
+  .content {
+    margin-left: 20rem;
+    margin-right: 2rem;
+    max-width: 38rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .content {
+    margin-left: 20rem;
+    margin-right: 2rem;
+    max-width: 44rem;
+  }
+}
+
+/*
+   * Reverse layout
+   *
+   * Flip the orientation of the page by placing the `.sidebar` on the right.
+   */
+
+@media (min-width: 48em) {
+  .layout-reverse .sidebar {
+    left: auto;
+    right: 0;
+  }
+  .layout-reverse .content {
+    margin-left: 2rem;
+    margin-right: 20rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .layout-reverse .content {
+    margin-left: 4rem;
+    margin-right: 22rem;
+  }
+}
+
+/******************************************************************************
+ Extra styling parts
+ ******************************************************************************/
+
+h1 {
+  font-size: 2.15rem;
+}
+
+h2 {
+  font-size: 1.85rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.headshot {
+  height: 115px;
+  width: 115px;
+}
+
+.brand {
+  font-size: 2.6em;
+  margin-bottom: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+pre {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 1px;
+  tab-size: 2;
+}
+
+.hljs {
+  overflow-x: auto;
+  white-space: pre;
+}
+
+pre code,
+li code,
+td code,
+code {
+  background-color: #f9f2f4;
+  border-radius: 4px;
+  padding: 2px 4px;
+  white-space: pre-wrap;
+}
+
+code {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 84%;
+}
+
+.copyright,
+.poweredby {
+  font-size: .8rem;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  border-width: 2px;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+
+a:focus,
+a:hover {
+  border-bottom-style: solid;
+  border-width: 2px;
+  text-decoration: none;
+  background: transparent;
+  background-color: transparent;
+  word-wrap: break-word;
+}
+
+a.tag,
+a:focus.tag,
+a:hover.tag {
+  border-bottom-style: none;
+  text-decoration: none;
+}
+
+.meta {
+  font-size: .8rem;
+  font-weight: 300;
+}
+
+.tag {
+  background: #d6d9e0;
+  border-radius: 2px;
+  color: #606570;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px 2px;
+}
+
+.post__subtitle {
+  display: block;
+  font-size: 1.5rem;
+  font-style: italic;
+  padding: 0 0 1rem 0;
+}
+
+.list__title--big {
+  display: block;
+  font-size: 1.785rem;
+  line-height: 1.25;
+}
+
+.list__title--small {
+  font-size: 1rem;
+}
+
+.list__date {
+  color: #9a9a9a;
+}
+
+.title__date {
+  color: #9a9a9a;
+  display: block;
+  margin-bottom: .2rem;
+  margin-top: .2rem;
+}
+.page__nav {
+  margin-top: -2rem;
+}
+/* Small devices (tablets, 768px and up) */
+
+@media (max-width: 768px) {
+  .hidden-tablet {
+    display: none;
+  }
+}
+
+.pull-right {
+  float: right;
+}
+
+.social a {
+  border: none;
+  text-decoration: none;
+}
