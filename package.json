@@ -1,16 +1,16 @@
 {
   "name": "blog",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "htr3n's blog :: technology, thoughts, opinions, rants",
   "main": "index.js",
   "scripts": {
-    "remote": "hugo -v --cleanDestinationDir --baseURL \"https://htr3n.github.io\"",
-    "local": "hugo -v --cleanDestinationDir --buildDrafts --buildFuture --baseURL \"http://blog.test:8888\"",
-    "nodraft": "hugo -v --cleanDestinationDir --baseURL \"http://blog.test:8888\"",
-    "live": "hugo server -v -w --cleanDestinationDir --buildDrafts --baseURL \"http://blog.test:1313\"",
-    "lint": "node_modules/.bin/eslint static/js",
-    "compile": "echo \"Nothing to compile\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "remote": "hugo -v --cleanDestinationDir --baseURL \"https://htr3n.github.io/\"",
+    "local": "hugo -v --cleanDestinationDir --buildDrafts --buildFuture --baseURL \"http://blog.test:8888/\"",
+    "hugo-watch": "hugo server -v -w --buildDrafts --cleanDestinationDir --baseURL \"http://blog.test:1313/\"",
+    "dev": "npm-run-all --parallel scss-watch hugo-watch",
+    "scss-watch": "gulp watch",
+    "scss-build": "gulp release",
+    "prod": "npm-run-all --serial scss-build remote"
   },
   "repository": {
     "type": "git",
@@ -21,23 +21,22 @@
     "hugo",
     "static site generator",
     "gulp",
-    "webpack",
     "sass",
-    "less"
+    "hyde-hyde",
+    "postcss"
   ],
   "author": "htr3n",
   "license": "MIT",
   "homepage": "https://github.com/htr3n/htr3n-blog",
-  "dependencies": {
-    "npm": "^6.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "cssnano": "^4.0.0",
-    "eslint": "^5.1.0",
-    "eslint-config-airbnb": "^17.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jsx-a11y": "^6.1.0",
-    "eslint-plugin-react": "^7.10.0",
-    "webpack": "^4.0.0"
+    "autoprefixer": "^9.0.0",
+    "cssnano": "^4.0.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "npm-run-all": "^4.1.3"
   }
 }

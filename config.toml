@@ -1,4 +1,4 @@
-baseUrl = "https://htr3n.github.io"
+baseUrl = "https://htr3n.github.io/"
 languageCode = "en"
 
 author = "htr3n"
@@ -15,38 +15,47 @@ enableEmoji = true
 
 # Built-in highlighting
 # https://gohugo.io/content-management/syntax-highlighting
-# pygmentsCodeFences = true
-# pygmentsStyle = "friendly"
-# pygmentsStyle = "monokai"
-# pygmentsStyle = "default"
-# pygmentsUseClasses = true     # this overrides 'PygmentsStyle'
-# http://pygments.org
-# pygmentsUseClassic = true     # falling back to Pygments instead of Chroma
+#pygmentsCodeFences = true
+#pygmentsStyle = "friendly"
+#pygmentsStyle = "monokai"
+#pygmentsStyle = "default"
+#pygmentsUseClasses = true     # this overrides 'PygmentsStyle'
+#http://pygments.org
+#pygmentsUseClassic = true     # falling back to Pygments instead of Chroma
 
 ## Site Settings
 [params]
     author = "htr3n"
     description = "technology, thoughts, opinions, rants"
     authorimage = "img/avatar.png"
-    
+
     # https://golang.org/pkg/time/#example_Time_Format
     dateformat = "Jan 2, 2006"
-    
+
     # https://highlightjs.org
     highlightjs = true
     #highlightjsstyle = "agate"
     #highlightjsstyle = "androidstudio"
     #highlightjsstyle = "atom-one-dark"
+    highlightjsstyle = "atom-one-light"
     #highlightjsstyle = "dracula"
-    highlightjsstyle = "ocean"
+    #highlightjsstyle = "darcula"
+    #highlightjsstyle = "github"
+    #highlightjsstyle = "hybrid"
+    #highlightjsstyle = "monokai"
+    #highlightjsstyle = "ocean"
     #highlightjsstyle = "railscasts"
     #highlightjsstyle = "rainbow"
+    #highlightjsstyle = "sunburst"
+    #highlightjsstyle = "tomorrow-night"
+    #highlightjsstyle = "tomorrow-night-bright"
     #highlightjsstyle = "tomorrow-night-eighties"
     #highlightjsstyle = "zenburn"
-    
+
     # either GraphComment or Disqus
     # https://graphcomment.com
-    #GraphCommentId = "htr3n-github-io" 
+    #GraphCommentId = "htr3n-github-io"
+
     mainSections = ["post"]
 [permalinks]
     posts = "/:year/:month/:slug/"
@@ -96,10 +105,10 @@ enableEmoji = true
 
 # https://gohugo.io/content-management/related
 [related]
-    # Only include matches with rank >= threshold. This is a normalized rank 
+    # Only include matches with rank >= threshold. This is a normalized rank
     # between 0 and 100.
     threshold = 80
-    # To get stable "See also" sections we, by default, exclude newer related 
+    # To get stable "See also" sections we, by default, exclude newer related
     # pages.
     includeNewer = false
     # Will lower case keywords in both queries and in the indexes.
