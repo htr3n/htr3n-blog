@@ -21,13 +21,14 @@ gulp.task('scss', function (done) {
     .on('end', done);
 });
 
-gulp.task('watch', gulp.series('scss', function () {
+gulp.task('watch', gulp.series('scss', function (done) {
   let del = require('del');
   let targetFolder = 'static/css';
   log.info('Cleaning relevant CSSs in \'' + targetFolder + '\' before watching ...');
   // remove CSSs in 'static'
   del(targetFolder + '/hyde-hyde.*');
   gulp.watch(watchedResources, gulp.parallel('scss'));
+  done();
 }));
 
 gulp.task('release', function(done){

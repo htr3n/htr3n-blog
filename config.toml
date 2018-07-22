@@ -83,7 +83,7 @@ enableEmoji = true
 
 ## Main Menu
 [[menu.main]]
-    name = "Articles"
+    name = "Posts"
     weight = 100
     identifier = "posts"
     url = "/posts/"

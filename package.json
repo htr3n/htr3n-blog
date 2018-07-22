@@ -9,8 +9,8 @@
     "hugo-watch": "hugo server -v -w --buildDrafts --cleanDestinationDir --baseURL \"http://blog.test:1313/\"",
     "dev": "npm-run-all --parallel scss-watch hugo-watch",
     "scss-watch": "gulp watch",
-    "scss-build": "gulp release",
-    "prod": "npm-run-all --serial scss-build remote"
+    "scss-release": "gulp release",
+    "prod": "npm-run-all --serial scss-release remote"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,7 @@
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
+    "hoek": "^5.0.3",
     "npm-run-all": "^4.1.3"
   }
 }
