@@ -70,20 +70,21 @@ enableEmoji = true
 [params.social]
     github = "htr3n"
     #instagram = "htr3n"
-    #medium = "htr3n"
-    bitbucket = "hoanghuytran"
+    medium = "htr3n"
+    #bitbucket = "hoanghuytran"
     linkedin = "htr3n"
     twitter = "htr3n"
+    keybase = "htr3n"
     #facebook = "htr3n"
-    gitlab = "htr3n"
-    stackoverflow = "339302"
+    #gitlab = "htr3n"
+    #stackoverflow = "339302"
     #xing = "Huy_Tran2"
     email = "hoang.huy.tran+blog@gmail.com"
 
 
 ## Main Menu
 [[menu.main]]
-    name = "Posts"
+    name = "Writing"
     weight = 100
     identifier = "posts"
     url = "/posts/"

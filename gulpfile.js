@@ -27,7 +27,7 @@ gulp.task('watch', gulp.series('scss', function (done) {
   log.info('Cleaning relevant CSSs in \'' + targetFolder + '\' before watching ...');
   // remove CSSs in 'static'
   del(targetFolder + '/hyde-hyde.*');
-  gulp.watch(watchedResources, gulp.parallel('scss'));
+  gulp.watch(watchedResources, gulp.series('scss'));
   done();
 }));
 
