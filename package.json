@@ -10,7 +10,9 @@
     "dev": "npm-run-all --parallel scss-watch hugo-watch",
     "scss-watch": "gulp watch",
     "scss-release": "gulp release",
-    "prod": "npm-run-all --serial scss-release remote"
+    "minify-scss": "gulp minify-scss",
+    "minify-html": "gulp minify-html",
+    "deploy": "npm-run-all --serial minify-scss remote minify-html"
   },
   "repository": {
     "type": "git",
@@ -34,6 +36,7 @@
     "cssnano": "^4.0.3",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
+    "gulp-htmlmin": "^4.0.0",
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",

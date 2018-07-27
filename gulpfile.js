@@ -4,6 +4,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const sourcemaps    = require('gulp-sourcemaps');
+const htmlmin = require('gulp-htmlmin');
 const log = require('fancy-log');
 
 const sassSourceFile = 'themes/hyde-hyde/static-src/scss/hyde-hyde.scss';
@@ -45,18 +46,34 @@ gulp.task('release', function(done){
     .on('end', done);
 });
 
-gulp.task('deploy', function(done){
-  let outputFolder = 'static/css';
-  log('Compiling SCSSs to \'' + outputFolder + '\'');
-  gulp.src(sassSourceFile)
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', function(err){
-      log.error(err.message);
-    }))
-    .pipe(postcss([autoprefixer, cssnano]))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(outputFolder))
-    .on('end', done);
+gulp.task('minify-scss', function(done){
+    let cssOutputFolder = 'static/css';
+    log('Compiling SCSSs to \'' + cssOutputFolder + '\'');
+    gulp.src(sassSourceFile)
+      .pipe(sourcemaps.init())
+      .pipe(sass().on('error', function(err){
+        log.error(err.message);
+      }))
+      .pipe(postcss([autoprefixer, cssnano]))
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest(cssOutputFolder))
+      .on('end', done);
+});
+
+gulp.task('minify-html', function(done){
+    let publicFolder = 'public';
+    let html = publicFolder + '/**/*.html';
+    let css = publicFolder + '/**/*.css';
+    let js = publicFolder + '/**/*.js';
+    let dest = 'dist';
+    log('Minifying HTML/CSS/JS in \'' + publicFolder + '\' to \'' + dest + '\'');
+    gulp.src([html, css, js])
+      .pipe(htmlmin({collapseWhitespace: true}))
+      .pipe(gulp.dest(dest));
+    log('Copy the rest');
+    gulp.src([publicFolder + '/**' ,'!'+html, '!'+css, '!'+js])
+        .pipe(gulp.dest(dest)
+      .on('end', done));
 });
 
 gulp.task('default', gulp.series('watch', function () {}));
