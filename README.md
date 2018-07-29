@@ -10,6 +10,14 @@ npm i -D postcss-cli autoprefixer
 
 ## Quick Start
 
+Install NPM packages
+
+```sh
+npm install
+```
+
+
+
 For development and debugging:
 
 ```sh
@@ -19,5 +27,5 @@ npm run dev
 For production release:
 
 ```sh
-npm run prod
+npm run deploy
 ```

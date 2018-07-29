@@ -4,15 +4,17 @@
   "description": "htr3n's blog :: technology, thoughts, opinions, rants",
   "main": "index.js",
   "scripts": {
-    "remote": "hugo -v --cleanDestinationDir --baseURL \"https://htr3n.github.io/\"",
-    "local": "hugo -v --cleanDestinationDir --buildDrafts --buildFuture --baseURL \"http://blog.test:8888/\"",
+    "hugo-remote": "hugo -v --cleanDestinationDir --baseURL \"https://htr3n.github.io/\"",
+    "hugo-local": "hugo -v --cleanDestinationDir --buildDrafts --buildFuture --baseURL \"http://blog.test:8888/\"",
     "hugo-watch": "hugo server -v -w --buildDrafts --cleanDestinationDir --baseURL \"http://blog.test:1313/\"",
-    "dev": "npm-run-all --parallel scss-watch hugo-watch",
     "scss-watch": "gulp watch",
-    "scss-release": "gulp release",
+    "compile-scss": "gulp compile-scss",
     "minify-scss": "gulp minify-scss",
     "minify-html": "gulp minify-html",
-    "deploy": "npm-run-all --serial minify-scss remote minify-html"
+    "copy-public-to-dist": "gulp copy-public-to-dist",
+    "dev": "npm-run-all --parallel scss-watch hugo-watch",
+    "local": "npm-run-all --serial minify-scss hugo-local copy-public-to-dist",
+    "deploy": "npm-run-all --serial minify-scss hugo-remote minify-html"
   },
   "repository": {
     "type": "git",

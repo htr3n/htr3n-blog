@@ -1,6 +1,7 @@
-{{ if (.Site.GoogleAnalytics) -}}
+{{ if (.Site.GoogleAnalytics) }}
   <!-- Google Analytics -->
-  {{- template "_internal/google_analytics_async.html" . -}}
-{{- end }}
+  {{ template "_internal/google_analytics_async.html" . }}
+{{ end }}
 {{ partial "footer/font-awesome-js.html" . }}
 {{ partial "footer/load-deferred-styles.html" . }}
+{{ partial "highlight-js.html" . }}

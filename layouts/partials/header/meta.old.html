@@ -4,16 +4,16 @@
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 {{ .Hugo.Generator }}
-{{- if .IsHome }}
-    {{ $.Scratch.Set "theTitle" .Site.Title -}}
+{{ if .IsHome }}
+    {{ $.Scratch.Set "theTitle" .Site.Title }}
 {{else}}
     {{ $.Scratch.Add "theTitle" .Title}}
     {{ $.Scratch.Add "theTitle" " • "}}
     {{ $.Scratch.Add "theTitle" .Site.Title}}
-{{- end -}}
+{{ end }}
 <title>{{ $.Scratch.Get "theTitle" }}</title>
-{{ with .Site.Params.meta.description -}}<meta name="description" content="{{ . }}">{{- end }}
-{{ with .Site.Params.meta.keywords -}}<meta name="keywords" content="{{.}}">{{- end }}
+{{ with .Site.Params.meta.description }}<meta name="description" content="{{ . }}">{{ end }}
+{{ with .Site.Params.meta.keywords }}<meta name="keywords" content="{{.}}">{{ end }}
 <!-- Twitter -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="{{.Site.Params.social.twitter}}">
@@ -29,4 +29,4 @@
 <meta property="og:site_name" content="{{.Site.Title}}">
 <meta property="og:title" content="{{$.Scratch.Get "theTitle"}}">
 <meta property="og:description" content="{{.Site.Params.meta.description}}">
-{{ $.Scratch.Delete "theTitle" -}}
+{{ $.Scratch.Delete "theTitle" }}

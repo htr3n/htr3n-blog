@@ -44,7 +44,7 @@
             </author>
         {{end}}
         <guid>{{ md5 .Content }}</guid>
-        <description>{{ .Content | html }}</description>
+        <description>{{ .Summary | html }}</description>
       </item>
     {{ end }}
   </channel>
