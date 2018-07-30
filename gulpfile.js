@@ -67,14 +67,17 @@ gulp.task("minify-html", function(done) {
   let js = publicFolder + "/**/*.js";
   let dest = "dist";
   log("Minifying HTML/CSS/JS in '" + publicFolder + "' to '" + dest + "'");
-  gulp
-    .src([html, css, js])
-    .pipe(htmlmin({ collapseWhitespace: true }))
+  gulp.src(publicFolder + "/**")
     .pipe(gulp.dest(dest));
-  log("Copying the rest");
-  gulp
-    .src([publicFolder + "/**", "!" + html, "!" + css, "!" + js])
-    .pipe(gulp.dest(dest).on("end", done));
+  gulp.src([html, css, js])
+    .pipe(htmlmin(
+        { 
+            collapseWhitespace: true,
+            removeComments: true
+        }
+    ))
+    .pipe(gulp.dest(dest))
+    .on("end", done);
 });
 
 gulp.task("copy-public-to-dist", function(done) {
