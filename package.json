@@ -6,15 +6,15 @@
   "scripts": {
     "hugo-remote": "hugo -v --cleanDestinationDir --baseURL \"https://htr3n.github.io/\"",
     "hugo-local": "hugo -v --cleanDestinationDir --buildDrafts --buildFuture --baseURL \"http://blog.test:8888/\"",
-    "hugo-watch": "hugo server -v -w --buildDrafts --cleanDestinationDir --baseURL \"http://blog.test:1313/\"",
+    "hugo-watch": "hugo server -v -w --buildDrafts --buildFuture --cleanDestinationDir --baseURL \"http://blog.test:1313/\"",
     "scss-watch": "gulp watch",
     "compile-scss": "gulp compile-scss",
     "minify-scss": "gulp minify-scss",
-    "minify-html": "gulp minify-html",
+    "minify-resources": "gulp minify-resources",
     "copy-public-to-dist": "gulp copy-public-to-dist",
     "dev": "npm-run-all --parallel scss-watch hugo-watch",
     "local": "npm-run-all --serial minify-scss hugo-local copy-public-to-dist",
-    "deploy": "npm-run-all --serial minify-scss hugo-remote minify-html"
+    "deploy": "npm-run-all --serial minify-scss hugo-remote minify-resources"
   },
   "repository": {
     "type": "git",
@@ -34,8 +34,8 @@
   "homepage": "https://github.com/htr3n/htr3n-blog",
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^9.0.0",
-    "cssnano": "^4.0.3",
+    "autoprefixer": "^9.0.2",
+    "cssnano": "^4.0.5",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-htmlmin": "^4.0.0",

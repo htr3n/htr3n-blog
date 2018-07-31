@@ -4,6 +4,3 @@
 [submodule "content"]
 	path = content
 	url = git@gitlab.com:htr3n/htr3n-blog-content.git
-[submodule "dist"]
-	path = dist
-	url = git@github.com:htr3n/htr3n.github.io.git
