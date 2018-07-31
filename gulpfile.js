@@ -7,6 +7,7 @@ const sourcemaps = require("gulp-sourcemaps");
 const htmlmin = require("gulp-htmlmin");
 const log = require("fancy-log");
 const del = require("del");
+const print = require("gulp-print").default;
 
 const sassSourceFile = "themes/hyde-hyde/static-src/scss/hyde-hyde.scss";
 const watchedResources = "themes/hyde-hyde/static-src/scss/**/*";
@@ -24,7 +25,7 @@ gulp.task("clean-dist", function(done) {
     del([targetFolder + "/**", "!" + targetFolder, "!" + targetFolder + "/.*"]);
     done();
   });
-  
+
 gulp.task("compile-scss", function(done) {
   let themeOutputFolder = "themes/hyde-hyde/static/css";
   log("Compiling SCSSs to '" + themeOutputFolder + "'");
@@ -73,8 +74,8 @@ gulp.task("copy-public-to-dist", function(done) {
         .pipe(gulp.dest("dist")
         .on("end", done));
 });
-  
-gulp.task("minify-resources", gulp.series(["clean-dist", "copy-public-to-dist"], function(done) {
+
+gulp.task("minify-resources", gulp.series(["copy-public-to-dist"], function(done) {
   let publicFolder = "./public";
   let html = publicFolder + "/**/*ml";
   let css = publicFolder + "/**/*.css";
