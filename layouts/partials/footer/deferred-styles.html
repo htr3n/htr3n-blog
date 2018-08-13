@@ -3,5 +3,7 @@
       // https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery
   <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/styles.css" />
   -->
-  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/github.min.css" />
+  {{ if or ((not (isset .Params "highlight")) and ((isset .Params "highlight") .Params.highlight)) }}
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/atom-one-light.min.css" />
+  {{ end }}
 </noscript>

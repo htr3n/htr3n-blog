@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "hugo-remote": "hugo -v --cleanDestinationDir --baseURL \"https://htr3n.github.io/\"",
-    "hugo-local": "hugo -v --cleanDestinationDir --buildDrafts --buildFuture --baseURL \"http://blog.test:8888/\"",
+    "hugo-local": "hugo -v --cleanDestinationDir --buildDrafts --buildFuture --baseURL \"https://blog.test:8443/\"",
     "hugo-watch": "hugo server -v -w --buildDrafts --buildFuture --cleanDestinationDir --baseURL \"http://blog.test:1313/\"",
     "scss-watch": "gulp watch",
     "compile-scss": "gulp compile-scss",

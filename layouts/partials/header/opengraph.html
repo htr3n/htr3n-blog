@@ -15,8 +15,9 @@
     {{ end }}
   {{ end }}
 {{ else }}
+  <meta property="og:image" content="{{ .Site.Params.authorimage }}" />
 {{ end }}
-{{ partial "debug.html" .Site.Params.authorimage }}
+
 {{ if .IsPage }}
 {{ if not .PublishDate.IsZero }}<meta property="article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" | safeHTML }}"/>
 {{ else if not .Date.IsZero }}<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}"/>{{ end }}
@@ -38,7 +39,6 @@
     <meta property="og:video" content="{{ . | absURL }}" />
   {{ end }}
 {{ end }}
-
 <!-- If it is part of a series, link to related articles -->
 {{ $permalink := .Permalink }}
 {{ $siteSeries := .Site.Taxonomies.series }}{{ with .Params.series }}

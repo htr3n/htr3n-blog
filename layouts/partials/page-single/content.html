@@ -1,11 +1,11 @@
 <article>
-  <header>  
-    <h1>{{ .Title }}</h1>
+  <header>
+    <h1 class="post__title">{{ .Title }}</h1>
     {{ with .Params.subtitle }}
     <span class="post__subtitle">
       {{.}}
     </span>
-    {{ end }} 
+    {{ end }}
     {{ partial "page-single/post-meta.html" . }}
   </header>
   <div class="post">
