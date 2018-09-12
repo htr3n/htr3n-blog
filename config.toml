@@ -23,10 +23,14 @@ enableEmoji = true
 #http://pygments.org
 #pygmentsUseClassic = true     # falling back to Pygments instead of Chroma
 
+summarylength = 30
+
+paginate = 5
+
 ## Site Settings
 [params]
     author = "htr3n"
-    description = "technology, thoughts, opinions, rants"
+    #description = "technology, thoughts, opinions, rants"
     authorimage = "img/avatar.png"
     #authorimage = "img/avatar.svg"
 

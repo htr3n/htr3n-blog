@@ -6,7 +6,7 @@
   "scripts": {
     "hugo-remote": "hugo -v --cleanDestinationDir --baseURL \"https://htr3n.github.io/\"",
     "hugo-local": "hugo -v --cleanDestinationDir --buildDrafts --buildFuture --baseURL \"https://blog.test:8443/\"",
-    "hugo-watch": "hugo server -v -w --buildDrafts --buildFuture --cleanDestinationDir --baseURL \"http://blog.test:1313/\"",
+    "hugo-watch": "hugo server -w --buildDrafts --buildFuture --cleanDestinationDir --baseURL \"http://blog.test:1313/\"",
     "scss-watch": "gulp watch",
     "compile-scss": "gulp compile-scss",
     "minify-scss": "gulp minify-scss",
@@ -34,15 +34,16 @@
   "homepage": "https://github.com/htr3n/htr3n-blog",
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^9.0.2",
-    "cssnano": "^4.0.5",
+    "autoprefixer": "^9.1.5",
+    "cssnano": "^4.1.0",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-htmlmin": "^4.0.0",
     "gulp-postcss": "^7.0.1",
+    "gulp-print": "^5.0.0",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
-    "hoek": "^5.0.3",
+    "hoek": "^5.0.4",
     "npm-run-all": "^4.1.3"
   }
 }
