@@ -8,6 +8,8 @@
     {{ end }}
     {{ partial "page-single/post-meta.html" . }}
   </header>
+  {{ .TableOfContents }}
+  <div class="toc"></div>
   <div class="post">
     {{ .Content }}
   </div>

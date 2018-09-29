@@ -25,7 +25,7 @@ enableEmoji = true
 
 summarylength = 30
 
-paginate = 5
+paginate = 7
 
 ## Site Settings
 [params]
