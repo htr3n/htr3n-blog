@@ -61,6 +61,9 @@ paginate = 7
     # https://graphcomment.com
     #GraphCommentId = "htr3n-github-io"
 
+    #toc = "tocbot" # empty, "hugo", "tocbot"
+    #toc = "hugo"
+
     relatedPosts = true
     #postNavigation = false
 
