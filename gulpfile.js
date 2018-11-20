@@ -9,7 +9,7 @@ const log = require("fancy-log");
 const del = require("del");
 const print = require("gulp-print").default;
 
-const themeScssBase = "themes/hyde-hyde/static-src/scss/";
+const themeScssBase = "themes/hyde-hyde/assets/scss/";
 
 const scssFiles = {
   hydehyde: "hyde-hyde.scss",
@@ -20,7 +20,7 @@ const scssFiles = {
 
 const compilationTasks = Object.keys(scssFiles);
 
-const watchedResources = "themes/hyde-hyde/static-src/scss/**/*";
+const watchedResources = "themes/hyde-hyde/assets/scss/**/*";
 const themeOutputCssFolder = "themes/hyde-hyde/static/css";
 
 gulp.task("compile-hyde-scss", function(done) {

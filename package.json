@@ -12,9 +12,8 @@
     "minify-scss": "gulp minify-scss",
     "minify-resources": "gulp minify-resources",
     "copy-public-to-dist": "gulp copy-public-to-dist",
-    "dev": "npm-run-all --parallel scss-watch hugo-watch",
-    "local": "npm-run-all --serial minify-scss hugo-local copy-public-to-dist",
-    "deploy": "npm-run-all --serial minify-scss hugo-remote minify-resources"
+    "local": "npm-run-all --serial hugo-local copy-public-to-dist",
+    "deploy": "npm-run-all --serial hugo-remote minify-resources"
   },
   "repository": {
     "type": "git",
