@@ -16,15 +16,29 @@ Install NPM packages
 npm install
 ```
 
+## For Development and Debugging
 
+Please have a look at [`package.json`](https://github.com/htr3n/htr3n-blog/blob/master/package.json) for the following commands and adapt them to your needs.
 
-For development and debugging:
+### Generate pages for local hosting
 
 ```sh
-npm run dev
+npm run hugo-local
 ```
 
-For production release:
+Hugo will generate draft and future posts for the baseURL <https://blog.test:8443>.
+
+### Generate pages and keep watching for changes
+
+```sh
+npm run hugo-watch
+```
+
+Hugo will generate draft and future posts for the localhost baseURL <https://blog.test:8443> and keep an eye on any file changes and refresh the pages accordingly.
+
+### Generate pages for remote hosting
+
+Hugo will generate the posts without draft and future for the baseURL <https://htr3n.github.io> (my site).
 
 ```sh
 npm run deploy
