@@ -30,7 +30,7 @@ Please have a look at [`package.json`](https://github.com/htr3n/htr3n-blog/blob/
 ### Generate pages for local hosting
 
 ```sh
-npm run hugo-local
+npm run local
 ```
 
 Hugo will generate draft and future posts for the baseURL <https://blog.test:8443>.
@@ -38,7 +38,7 @@ Hugo will generate draft and future posts for the baseURL <https://blog.test:844
 ### Generate pages and keep watching for changes
 
 ```sh
-npm run hugo-watch
+npm run watch
 ```
 
 Hugo will generate draft and future posts for the localhost baseURL <https://blog.test:8443> and keep an eye on any file changes and refresh the pages accordingly.
