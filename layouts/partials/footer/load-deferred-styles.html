@@ -16,4 +16,10 @@
   });
   else
     window.addEventListener('load', loadDeferredStyles);
+  // code copy
+  document.addEventListener('DOMContentLoaded', function (event) {
+    codecopy('pre');
+  });
 </script>
+<!-- CodeCopy JS -->
+<script defer src="{{ "js/codecopy.min.js" | relURL }}"></script>

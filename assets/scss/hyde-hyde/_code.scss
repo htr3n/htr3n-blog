@@ -1,0 +1,64 @@
+%code-font {
+	font-family: $code-font-family;
+	font-size: $code-font-size;
+}
+
+%code-in-rounded-box {
+	border-radius: $code-rounded-border-radius;
+	padding: 2px 4px;
+	color: #bf616a;
+	background-color: #f9f2f4;
+}
+
+%code-style-codersblock {
+	padding: 2px 4px;
+	border: 1px dotted #adb5db;
+	background-color: $gray-1;
+}
+
+%code-style-npf {
+	padding: .1em .1em;
+	color: #ab5979;
+	border-radius: $code-rounded-border-radius;
+}
+
+%code-style-gray {
+	//padding: 2px 4px;
+	border: none;
+	//color: #444;
+	color: #ab5979;
+	// color: #515151;
+	border-radius: 0;
+	//background: rgba(0, 0, 0, .06);
+}
+
+a {
+	code {
+		color: $link-color;
+	}
+}
+
+:not(pre)>code {
+	@extend %code-font;
+	@extend %code-style-gray;
+}
+
+pre>code {
+	background: $code-background-color;
+}
+
+// highlight.js
+.hljs {
+	font-family: $code-font-family;
+	font-size: $code-fence-font-size;
+	line-height: $root-line-height;
+	white-space: pre;
+	//border: 1px solid $gray-3;
+	border-radius: $code-rounded-border-radius;
+}
+
+.code--caption {
+	font-style: italic;
+	text-align: center;
+	margin-top: -.6rem;
+}

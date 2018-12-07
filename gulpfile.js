@@ -112,7 +112,7 @@ gulp.task("minify-resources", gulp.series(["copy-public-to-dist"], function(done
   let js = publicFolder + "/**/*.js";
   let dest = "dist";
   log("Minifying HTML/CSS/JS in '" + publicFolder + "' to '" + dest + "'");
-  gulp.src([html, css, js])
+  gulp.src([html, css])
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest(dest))
     .on("end", done);

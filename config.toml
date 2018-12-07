@@ -3,7 +3,6 @@ languageCode = "en"
 
 author = "htr3n"
 title = "htr3n's"
-copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 
 theme = "hyde-hyde"
 
@@ -36,6 +35,12 @@ paginate = 7
 
     # https://golang.org/pkg/time/#example_Time_Format
     dateformat = "Jan 2, 2006"
+
+    # sidebar, copyright & license
+    copyright = "htr3n"
+    license = "CC BY-SA 4.0"
+    licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
+    showBuiltWith = true
 
     # https://highlightjs.org
     highlightjs = true
@@ -90,6 +95,7 @@ paginate = 7
     #gitlab = "htr3n"
     stackoverflow = "339302"
     #xing = "Huy_Tran2"
+    #gravatar = "hoang.huy.tran@gmail.com"
     email = "hoang.huy.tran+blog@gmail.com"
 
 

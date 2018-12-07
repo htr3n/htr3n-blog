@@ -1,0 +1,4 @@
+<div>
+  {{ .Inner | markdownify }}
+  <div class="code--caption">{{ with .Get "caption" }}{{ . | markdownify}}{{end}}</div>
+</div>
