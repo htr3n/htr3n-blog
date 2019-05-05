@@ -20,7 +20,7 @@ $blue-2: #2471a3;
 $brown: #8f5536;
 
 //https://www.client9.com/css-system-font-stack-sans-serif-v3
-$root-font-family: "IBM Plex Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Droid Sans", "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+$root-font-family: "IBM Plex Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
 
 // poole's variables
 $root-font-size: 17px;
@@ -56,7 +56,7 @@ $code-line-height: 1.4;
 $code-rounded-border-radius: 4px;
 
 // links
-$link-color: #003399;
+$link-color: $blue;
 $link-hover-color: #0066cc;
 $link-color-visited: #7766cc;
 

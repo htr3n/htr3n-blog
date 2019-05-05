@@ -55,33 +55,32 @@ figure {
 }
 
 %quotebox {
-	padding: .2rem .8rem;
-	margin-left: 0px;
-	margin-right: 0px;
+	padding: 1rem;
+	margin: 0 0 1rem 0;
 	//border-radius: 6px;
-	border-left: 6px solid;
-	border-right: 6px solid transparent;
-	border-right-width: 6px;
-	border-right-style: solid;
-	border-right-color: rgba(0, 0, 0, 0) transparent;
+	border-left: 8px solid;
+	//border-right: 6px solid transparent;
+	//border-right-width: 6px;
+	//border-right-style: solid;
+	//border-right-color: rgba(0, 0, 0, 0) transparent;
 	color: #7a7a7a;
 }
 
 blockquote {
-	background-color: #fafafa;
-	border-left-color: #e6e6e6;
+	border-left-color: #ccc;
+	background: linear-gradient(to right, #eee, white);
 	@extend %quotebox;
 }
 
 .important {
-	background-color: #fbf8e8;
+	background: linear-gradient(to right, #eee, white);
 	border-left-color: #fee450;
 	@extend %quotebox;
 }
 
 .warning {
-	background-color: #f2dbdc;
-	border-left-color: #ae272f;
+	border-left-color: #AB5A7A;
+	background: linear-gradient(to right, #eee, white);
 	@extend %quotebox;
 }
 
@@ -129,7 +128,7 @@ a {
 		@include link-visited();
 		&.tag {
 			@include link-no-decoration();
-		}	
+		}
 	}
 	&.tag {
 		@include link-no-decoration();
