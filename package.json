@@ -7,13 +7,14 @@
     "hugo-remote": "hugo -v --cleanDestinationDir --baseURL \"https://htr3n.github.io/\"",
     "hugo-local": "hugo -v --cleanDestinationDir --buildDrafts --buildFuture --baseURL \"https://blog.test:8443/\"",
     "scss-watch": "gulp watch",
+    "clean-dist": "gulp clean-dist",
     "compile-scss": "gulp compile-scss",
     "minify-scss": "gulp minify-scss",
     "minify-resources": "gulp minify-resources",
     "copy-public-to-dist": "gulp copy-public-to-dist",
     "local": "npm-run-all --serial hugo-local copy-public-to-dist",
     "watch": "hugo server -w --buildDrafts --buildFuture --cleanDestinationDir --baseURL \"http://blog.test:1313/\"",
-    "deploy": "npm-run-all --serial hugo-remote minify-resources"
+    "deploy": "npm-run-all --serial hugo-remote clean-dist minify-resources"
   },
   "repository": {
     "type": "git",
@@ -44,6 +45,7 @@
     "gulp-print": "^5.0.2",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-using": "^0.1.1",
     "hoek": "^6.1.3",
     "lodash": "^4.17.13",
     "npm-run-all": "^4.1.0",

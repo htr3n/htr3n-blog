@@ -8,6 +8,7 @@ const htmlmin = require("gulp-htmlmin");
 const log = require("fancy-log");
 const del = require("del");
 const print = require("gulp-print").default;
+const using = require("gulp-using");
 
 const themeScssBase = "themes/hyde-hyde/assets/scss/";
 
@@ -101,19 +102,26 @@ gulp.task("clean-dist", function(done) {
 gulp.task("copy-public-to-dist", function(done) {
   gulp
       .src(["public/**", "!public/.*"])
+      //.pipe(using())
       .pipe(gulp.dest("dist")
       .on("end", done));
 });
 
 gulp.task("minify-resources", gulp.series(["copy-public-to-dist"], function(done) {
   let publicFolder = "./public";
-  let html = publicFolder + "/**/*ml";
+  let html = publicFolder + "/**/*.html";
   let css = publicFolder + "/**/*.css";
   let js = publicFolder + "/**/*.js";
   let dest = "dist";
   log("Minifying HTML/CSS/JS in '" + publicFolder + "' to '" + dest + "'");
   gulp.src([html, css])
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    //.pipe(using())
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      keepClosingSlash: true,
+      preserveLineBreaks: true,
+      removeComments: true
+    }))
     .pipe(gulp.dest(dest))
     .on("end", done);
 }));
