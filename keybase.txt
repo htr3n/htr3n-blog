@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/htr3n
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://htr3n.github.io
+  * I am htr3n (https://keybase.io/htr3n) on keybase.
+  * I have a public key ASC_QkuVEhTV29hXBa4o6V__M0zHGF5PPqmFsI7xH82S1go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120bf424b951214d5dbd85705ae28e95fff334cc7185e4f3ea985b08ef11fcd92d60a",
+      "host": "keybase.io",
+      "kid": "0120bf424b951214d5dbd85705ae28e95fff334cc7185e4f3ea985b08ef11fcd92d60a",
+      "uid": "5c5beeb1b47777913208fd0d23842919",
+      "username": "htr3n"
+    },
+    "merkle_root": {
+      "ctime": 1532564128,
+      "hash": "a0e7d569efc137cc7974837e2fcbf6f2148c68cf65a97fcc6d0ee6aa2f310dcf7b37ebe61a706da641b194309e0f68f14d981d12b4d89ed06055c0258b7aac00",
+      "hash_meta": "e775d7c4ba2d07f0552d724d4c11e3b2ea721fdbd0e7f02acef015b2bc6f44e3",
+      "seqno": 3331964
+    },
+    "service": {
+      "entropy": "YHKdLrog6X+W3mg9ucKMTVS7",
+      "hostname": "htr3n.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.3.0"
+  },
+  "ctime": 1532564150,
+  "expire_in": 504576000,
+  "prev": "7d7abb5699f61fac544ea03d667e4d3b2a114abea7892ca044102908cb1e5e5d",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgv0JLlRIU1dvYVwWuKOlf/zNMxxheTz6phbCO8R/NktYKp3BheWxvYWTESpcCCMQgfXq7Vpn2H6xUTqA9Zn5NOyoRSr6niSygRBApCMseXl3EIJH02NIoWvjCiqIDC5j9WT9e2oMyVZ1EYPERC8lnf3WLAgHCo3NpZ8RAEdCNW6PZZg1xcWcFn5/lbzscGSJdQrFM5nrUbUpiBX+Br0r1V/+lgHpFpJxiGshz4uzxYIVsUovPHKDDf//ICKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIOyZCzmf25ecOL6ZP5Q+v6mP4cmfsL0i0wohE9SDg5joo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/htr3n
+
+==================================================================

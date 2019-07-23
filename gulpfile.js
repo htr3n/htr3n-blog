@@ -107,6 +107,13 @@ gulp.task("copy-public-to-dist", function(done) {
       .on("end", done));
 });
 
+gulp.task("copy-keybase-txt-to-dist", function(done) {
+  gulp
+      .src(["keybase.txt"])
+      .pipe(gulp.dest("dist")
+      .on("end", done));
+});
+
 gulp.task("minify-resources", gulp.series(["copy-public-to-dist"], function(done) {
   let publicFolder = "./public";
   let html = publicFolder + "/**/*.html";
