@@ -72,7 +72,6 @@ paginate = 7
     relatedPosts = true
     #postNavigation = false
 
-    mainSections = ["post"]
 [permalinks]
     posts = "/:year/:month/:slug/"
     vn = "/:year/:month/:slug/"
