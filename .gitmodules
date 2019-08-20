@@ -4,3 +4,6 @@
 [submodule "dist"]
 	path = dist
 	url = git@github.com:htr3n/htr3n.github.io.git
+[submodule "content"]
+	path = content
+	url = git@github.com:htr3n/blog-content.git
