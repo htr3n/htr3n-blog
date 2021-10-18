@@ -3,7 +3,7 @@
       // https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery
   <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/styles.css" />
   -->
-  {{ if or ((not (isset .Params "highlight")) and ((isset .Params "highlight") .Params.highlight)) }}
+  {{ if (or (not (isset .Params "highlight")) (and (isset .Params "highlight") .Params.highlight)) }}
   <link rel="stylesheet" type="text/css" href="{{ "css/ocean.min.css" | relURL }}" />
   <link rel="stylesheet" type="text/css" href="{{ "css/codecopy.min.css" | relURL }}" />
   {{ end }}
