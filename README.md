@@ -1,4 +1,4 @@
-[![Dependency Status](https://img.shields.io/librariesio/github/htr3n/htr3n-blog)](https://img.shields.io/librariesio/github/htr3n/htr3n-blog)
+[![Dependency Status](https://img.shields.io/librariesio/github/htr3n/htr3n-blog)](https://libraries.io/github/htr3n/htr3n-blog)
 [![Known Vulnerabilities](https://snyk.io/test/github/htr3n/htr3n-blog/badge.svg?targetFile=package.json)](https://snyk.io/test/github/htr3n/htr3n-blog?targetFile=package.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
