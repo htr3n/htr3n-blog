@@ -4,27 +4,19 @@
 
 # Blog Source (<https://htr3n.github.io>)
 
-This is the source of [my blog](https://htr3n.github.io) hosted at github.io. The blog uses the static site generator [Hugo](https://gohugo.io/) with the theme [`hyde-hyde`](https://github.com/htr3n/hyde-hyde) that I created. The generated and optimised site is hosted [here](https://github.com/htr3n/htr3n.github.io).
-
-Since Hugo v0.43+, I might not need the Gulp-based workflow as Hugo provides sufficient support for transforming SCSS to CSS, PostCSS, and minification. Nevertheless, due to some issues with messing up sourcemaps, I still keep the Gulp 4 based workflow as it just works flawlessly for now.
-
-Note that, we still have to install external tools for Hugo 0.43+ extensions to work.
-
-```sh
-yarn add -D postcss-cli autoprefixer # npm i -D postcss-cli autoprefixer
-```
+This is the source of [my blog](https://htr3n.github.io) hosted at github.io. I use [Hugo](https://gohugo.io/) with the theme [`hyde-hyde`](https://github.com/htr3n/hyde-hyde) that I created to generate the static resources (HTML, JS, CSS, etc.) and use Gulp with some simple tasks to minifying and setting up other resources (e.g. Keybase).
 
 ## Quick Start
 
-Install NPM packages
+Install the NPM dependencies
 
 ```sh
 yarn install  # npm install
 ```
 
-## For Development and Debugging
+## Developing and Deploying
 
-Please have a look at [`package.json`](https://github.com/htr3n/htr3n-blog/blob/master/package.json) for the following commands and adapt them to your needs.
+Look into the file [`package.json`](https://github.com/htr3n/htr3n-blog/blob/master/package.json) for the following commands and adapt them to your need. You might need to adjust the `baseURL` value.
 
 ### Generate pages for local testing
 
@@ -38,12 +30,18 @@ yarn local  # npm run local
 yarn watch  # npm run watch
 ```
 
-Hugo will generate draft and future posts for the localhost <https://localhost:1313> and keep an eye on any file changes and refresh the pages accordingly.
+Hugo will generate drafts and future posts for the localhost <https://localhost:1313> and keep an eye on any file changes and refresh the pages accordingly.
 
 ### Generate pages for remote hosting
 
-Hugo will generate the posts without draft and future for the `baseURL`, e.g. 'https://htr3n.github.io'.
+Hugo will generate the posts excluding drafts and futures for the configured `baseURL`, e.g. 'https://htr3n.github.io'.
 
 ```sh
 yarn deploy   # npm run deploy
 ```
+
+
+
+# License
+
+MIT, of course.
