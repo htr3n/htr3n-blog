@@ -4,14 +4,14 @@
 
 # Blog Source (<https://htr3n.github.io>)
 
-This is the working-in-progress source of [my blog](https://htr3n.github.io) hosted at github.io. The blog uses the static site generator [Hugo](https://gohugo.io/) with theme [`hyde-hyde`](https://github.com/htr3n/hyde-hyde). The generated and optimised site is hosted [here](https://github.com/htr3n/htr3n.github.io).
+This is the source of [my blog](https://htr3n.github.io) hosted at github.io. The blog uses the static site generator [Hugo](https://gohugo.io/) with the theme [`hyde-hyde`](https://github.com/htr3n/hyde-hyde) that I created. The generated and optimised site is hosted [here](https://github.com/htr3n/htr3n.github.io).
 
 Since Hugo v0.43+, I might not need the Gulp-based workflow as Hugo provides sufficient support for transforming SCSS to CSS, PostCSS, and minification. Nevertheless, due to some issues with messing up sourcemaps, I still keep the Gulp 4 based workflow as it just works flawlessly for now.
 
 Note that, we still have to install external tools for Hugo 0.43+ extensions to work.
 
 ```sh
-npm i -D postcss-cli autoprefixer
+yarn add -D postcss-cli autoprefixer # npm i -D postcss-cli autoprefixer
 ```
 
 ## Quick Start
@@ -19,7 +19,7 @@ npm i -D postcss-cli autoprefixer
 Install NPM packages
 
 ```sh
-npm install
+yarn install  # npm install
 ```
 
 ## For Development and Debugging
@@ -29,7 +29,7 @@ Please have a look at [`package.json`](https://github.com/htr3n/htr3n-blog/blob/
 ### Generate pages for local hosting
 
 ```sh
-npm run local
+yarn local  # npm run local
 ```
 
 Hugo will generate draft and future posts for the baseURL <https://blog.test:8443>.
@@ -37,7 +37,7 @@ Hugo will generate draft and future posts for the baseURL <https://blog.test:844
 ### Generate pages and keep watching for changes
 
 ```sh
-npm run watch
+yarn watch  # npm run watch
 ```
 
 Hugo will generate draft and future posts for the localhost baseURL <https://blog.test:8443> and keep an eye on any file changes and refresh the pages accordingly.
@@ -47,5 +47,5 @@ Hugo will generate draft and future posts for the localhost baseURL <https://blo
 Hugo will generate the posts without draft and future for the baseURL <https://htr3n.github.io> (my site).
 
 ```sh
-npm run deploy
+yarn deploy   # npm run deploy
 ```
