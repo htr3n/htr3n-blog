@@ -4,7 +4,7 @@
 
 # Blog Source (<https://htr3n.github.io>)
 
-This is the source of [my blog](https://htr3n.github.io) hosted at github.io. I use [Hugo](https://gohugo.io/) with the theme [`hyde-hyde`](https://github.com/htr3n/hyde-hyde) that I created to generate the static resources (HTML, JS, CSS, etc.) and use Gulp with some simple tasks to minifying and setting up other resources (e.g. Keybase).
+This is the source of [my blog](https://htr3n.github.io) hosted at github.io. I use [Hugo](https://gohugo.io/) with the theme [`hyde-hyde`](https://github.com/htr3n/hyde-hyde) that I created to generate the static resources (HTML, JS, CSS, etc.) and use Gulp with some simple tasks for minifying and setting up other resources (e.g. Keybase).
 
 ## Quick Start
 
