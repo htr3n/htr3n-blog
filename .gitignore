@@ -6,9 +6,7 @@ public/**
 
 ### Yarn 2
 # https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
-#
-yarn-debug.log*
-yarn-error.log*
+
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
@@ -22,3 +20,10 @@ yarn.lock
 # if you are NOT using Zero-installs, then:
 # comment the following lines
 #!.yarn/cache
+
+# and uncomment the following lines
+.pnp.*
+
+.hugo*.lock
+
+yarn.lock

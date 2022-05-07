@@ -26,13 +26,11 @@ yarn install  # npm install
 
 Please have a look at [`package.json`](https://github.com/htr3n/htr3n-blog/blob/master/package.json) for the following commands and adapt them to your needs.
 
-### Generate pages for local hosting
+### Generate pages for local testing
 
 ```sh
 yarn local  # npm run local
 ```
-
-Hugo will generate draft and future posts for the baseURL <https://blog.test:8443>.
 
 ### Generate pages and keep watching for changes
 
@@ -40,11 +38,11 @@ Hugo will generate draft and future posts for the baseURL <https://blog.test:844
 yarn watch  # npm run watch
 ```
 
-Hugo will generate draft and future posts for the localhost baseURL <https://blog.test:8443> and keep an eye on any file changes and refresh the pages accordingly.
+Hugo will generate draft and future posts for the localhost <https://localhost:1313> and keep an eye on any file changes and refresh the pages accordingly.
 
 ### Generate pages for remote hosting
 
-Hugo will generate the posts without draft and future for the baseURL <https://htr3n.github.io> (my site).
+Hugo will generate the posts without draft and future for the `baseURL`, e.g. 'https://htr3n.github.io'.
 
 ```sh
 yarn deploy   # npm run deploy
