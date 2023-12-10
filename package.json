@@ -1,5 +1,5 @@
 {
-  "name": "blog",
+  "name": "htr3n-blog",
   "version": "3.0.0",
   "description": "htr3n's blog :: technology, thoughts, opinions, rants",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:htr3n/htr3n-blog.git"
+    "url": "git://git@github.com:htr3n/htr3n-blog.git"
   },
   "keywords": [
     "blog",

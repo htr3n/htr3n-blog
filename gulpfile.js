@@ -25,11 +25,10 @@ gulp.task("copy-keybase-txt-to-dist", function (done) {
 });
 
 gulp.task("minify-resources", gulp.series(["copy-public-to-dist"], function (done) {
-  let publicFolder = "./public";
-  let html = publicFolder + "/**/*.html";
-  let css = publicFolder + "/**/*.css";
-  let js = publicFolder + "/**/*.js";
-  let dest = "dist";
+  const publicFolder = "./public";
+  const html = publicFolder + "/**/*.html";
+  const css = publicFolder + "/**/*.css";
+  const dest = "dist";
   log("Minifying HTML/CSS/JS in '" + publicFolder + "' to '" + dest + "'");
   gulp.src([html, css])
   .pipe(htmlmin({

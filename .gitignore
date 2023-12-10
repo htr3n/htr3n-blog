@@ -27,3 +27,5 @@ yarn.lock
 .hugo*.lock
 
 yarn.lock
+
+_gen
