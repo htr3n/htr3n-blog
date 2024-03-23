@@ -1,8 +1,8 @@
 baseUrl = "https://htr3n.github.io/"
 languageCode = "en"
 
-author = "htr3n"
-title = "htr3n's"
+author = "Alex T."
+title = "Alex T."
 
 theme = "hyde-hyde"
 
@@ -28,7 +28,7 @@ paginate = 7
 
 ## Site Settings
 [params]
-    author = "htr3n"
+    author = "Alex"
     #description = "technology, thoughts, opinions, rants"
     authorimage = "img/avatar.png"
     #authorimage = "img/avatar.svg"
@@ -36,8 +36,8 @@ paginate = 7
     # https://golang.org/pkg/time/#example_Time_Format
     dateformat = "Jan 2, 2006"
 
-    # sidebar, copyright & license
-    copyright = "htr3n"
+    # sidebar, copyright & licence
+    copyright = "Alex T."
     license = "CC BY-SA 4.0"
     licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
     showBuiltWith = true
@@ -78,8 +78,8 @@ paginate = 7
 
 ## Site Meta Settings
 [params.meta]
-    description = "htr3n's blog :: technology, thoughts, opinions, and rants"
-    keywords = "blog,java,php,python,golang,javascript,shell,thoughts,macos,apple,tiếng việt,parental,family,apache,httpd,laravel,politics,critical thinking,chính trị,luật,hiến pháp,xã hội,gia đình"
+    description = "Alex's corner :: tech, thoughts, and rants"
+    keywords = "aws,java,php,python,golang,javascript,shell,thoughts,macos,apple,tiếng việt,parental,family,apache,httpd,laravel,politics,critical thinking,chính trị,luật,hiến pháp,xã hội,gia đình"
 
 ## Social Accounts
 [params.social]
